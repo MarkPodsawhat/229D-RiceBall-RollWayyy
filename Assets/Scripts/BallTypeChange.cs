@@ -10,7 +10,6 @@ public class BallTypeChange : MonoBehaviour
         {
             Player player = other.gameObject.GetComponent<Player>();
             player.ChangeBallType(matNo);
-            Debug.Log("Change!!--1");
         }
     }
 
