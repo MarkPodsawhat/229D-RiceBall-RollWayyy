@@ -388,9 +388,9 @@ MonoBehaviour:
   face: {fileID: 8157449382708304073}
   cam: {fileID: 8706613221654075546}
   camfollower: {fileID: 5414521100013302802}
-  forceMag: 5
-  maxSpeed: 10
-  deceleration: 2
+  forceMag: 8
+  maxSpeed: 16
+  deceleration: 4
   camX: 5
   camY: 5
   camZ: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: bb86a64c75c5d6946b7ccfb7112b92f0, type: 2}
   physicMaterial: {fileID: 13400000, guid: a95075d530fa9e041903c2b9e1766683, type: 2}
-  mass: 2
+  mass: 1.5
   linearDamping: 0.01
   angularDamping: 0.02
 --- !u!1 &8157449382708304073
