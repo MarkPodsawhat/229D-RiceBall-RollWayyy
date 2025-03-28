@@ -933,8 +933,9 @@ GameObject:
   - component: {fileID: 814146868}
   - component: {fileID: 814146867}
   - component: {fileID: 814146866}
+  - component: {fileID: 814146870}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: FallOffCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -955,7 +956,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1029,6 +1030,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &814146870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814146865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7290debc802da18489489e23954d6e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &826032622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,8 +1054,9 @@ GameObject:
   - component: {fileID: 826032625}
   - component: {fileID: 826032624}
   - component: {fileID: 826032623}
+  - component: {fileID: 826032627}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GoalCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,6 +1151,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &826032627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826032622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8407eaefb72ce43a02221f5b5494bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1675,7 @@ GameObject:
   - component: {fileID: 1497953008}
   m_Layer: 0
   m_Name: Area (3)
-  m_TagString: ConvertTypeArea
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2134,38 +2160,6 @@ PrefabInstance:
     - target: {fileID: 344243007897497313, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
       propertyPath: m_Name
       value: BallPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075828610237433157, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: camX
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075828610237433157, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: camY
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075828610237433157, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: camZ
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026280069656792248, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026280069656792248, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026280069656792248, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026280069656792248, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026280069656792248, guid: ed4c4a378c92c21449e6924d137132f2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

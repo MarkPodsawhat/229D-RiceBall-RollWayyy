@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - ConvertTypeArea
+  - Spawn
   layers:
   - Default
   - TransparentFX

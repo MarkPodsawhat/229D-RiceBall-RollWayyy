@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 730cc3c9ec59fae4db71b240bdc97b64, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e4e632d7eb0743d4bb5e64f90bf5f592, type: 2}
     - target: {fileID: 919132149155446097, guid: 730cc3c9ec59fae4db71b240bdc97b64, type: 3}
       propertyPath: m_Name
       value: map
@@ -1012,8 +1016,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.010030847
-  m_Center: {x: -0.0000029904772, y: -0.0000013797548, z: 0.0000035678977}
+  m_Radius: 0.01
+  m_Center: {x: 0, y: -0, z: 0}
 --- !u!75 &1109262907
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -1023,7 +1027,7 @@ ConstantForce:
   m_GameObject: {fileID: 1109262901}
   m_Enabled: 1
   m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 10}
+  m_RelativeForce: {x: 0, y: 10, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!59 &1109262908
@@ -1036,7 +1040,7 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 1019797060}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.01000803, z: 0}
+  m_Anchor: {x: 0, y: 0, z: 0.05}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
@@ -1075,15 +1079,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 500
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 500
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 161.15033
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1091,11 +1095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.9965274
+      value: -4.834509
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.0000023841858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49c52c5d361608444ba061e21b15e8c3, type: 3}
       propertyPath: m_LocalRotation.w
