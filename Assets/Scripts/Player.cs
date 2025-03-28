@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     Material newMaterial;
     MeshRenderer meshRenderer;
+    SphereCollider sphereCollider;
 
     public GameObject face;
     public Camera cam;
@@ -22,11 +24,7 @@ public class Player : MonoBehaviour
     public float camY = 0;
     public float camZ = 0;
 
-    [Header("Material")]
-    public Material[] materials;
-
-    [Header("PhysicsMaterial")]
-    public PhysicsMaterial[] physicMaterial;
+    [SerializeField] public BallStat[] ballTypes;
 
     private InputAction moveAction;
     private InputAction breakAction;
@@ -35,13 +33,10 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         meshRenderer = GetComponent<MeshRenderer>();
+        sphereCollider = GetComponent<SphereCollider>();
+
         moveAction = InputSystem.actions.FindAction("Move");
         breakAction = InputSystem.actions.FindAction("Break");
-    }
-
-    void Start()
-    {
-        
     }
     
     void FixedUpdate()
@@ -88,12 +83,19 @@ public class Player : MonoBehaviour
         cam.transform.LookAt(transform.position);
     }
 
-    public void ChangeBallType(int matNo)
+    public void ChangeBallType(int i)
     {   
-        if (matNo < materials.Length)
+        if (i < ballTypes.Length)
         {
-            newMaterial = materials[matNo];
+            newMaterial = ballTypes[i].material;
             meshRenderer.sharedMaterial = newMaterial;
+
+            sphereCollider.material = ballTypes[i].physicMaterial;
+
+            rb.mass = ballTypes[i].mass;
+            rb.linearDamping = ballTypes[i].linearDamping;
+            rb.angularDamping = ballTypes[i].angularDamping;
+            
         }
     }
 
