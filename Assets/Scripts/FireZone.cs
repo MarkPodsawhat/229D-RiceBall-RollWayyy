@@ -5,9 +5,14 @@ public class FireZone : MonoBehaviour
     public GameObject spawnPoint;
     public Material banMat;
 
-    private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        var ball = other.gameObject;
+        spawnPoint = GameObject.FindGameObjectWithTag("Spawn");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        var ball = collision.gameObject;
         if (ball.CompareTag("Player"))
         {
             var rb = ball.GetComponent<Rigidbody>();
