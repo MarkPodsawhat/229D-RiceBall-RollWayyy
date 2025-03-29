@@ -20,9 +20,7 @@ public class Player : MonoBehaviour
     public float deceleration = 2.0f;
 
     [Header("Camera")]
-    public float camX = 0;
-    public float camY = 0;
-    public float camZ = 0;
+    public Vector3 camOffSet;
 
     [SerializeField] public BallStat[] ballTypes;
 
@@ -79,7 +77,7 @@ public class Player : MonoBehaviour
 
     public void CamController()
     {
-        cam.transform.position = camfollower.transform.position + new Vector3(camX, camY, camZ);
+        cam.transform.position = camfollower.transform.position + camOffSet;
         cam.transform.LookAt(transform.position);
     }
 
