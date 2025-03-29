@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject TitleScene;
     public GameObject TimeUi;
-    public GameObject EndScene;
+    public GameObject WASD;
 
     public TextMeshProUGUI InGameTime;
 
@@ -16,34 +16,31 @@ public class GameManager : MonoBehaviour
     public Button ExitButton;
     public Button BackButton;
 
+    public bool timeBool = false;
     private float timer;
-    private TextMeshPro tmp;
 
-    private void Awake()
-    {
-
-    }
-    void Start()
-    {
-        tmp = TimeUi.GetComponent<TextMeshPro>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        TimeCount();
+        if (timeBool)
+        {
+            TimeCount();
+        }
     }
 
     public void TimeCount()
     {
         timer += Time.deltaTime;
-        tmp.text = timer.ToString();
+        int min = Mathf.FloorToInt(timer / 60);
+        int sec = Mathf.FloorToInt(timer % 60);
+        InGameTime.text = string.Format("{0:00}:{1:00}", min,sec);
     }
 
     public void OnStart()
     {
         TitleScene.SetActive(false);
         TimeUi.SetActive(true);
+        timeBool = true;
+        WASD.SetActive(true);
     }
 
     public void BackMenu()
