@@ -1,5 +1,7 @@
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -15,21 +17,27 @@ public class GameManager : MonoBehaviour
     public Button BackButton;
 
     private float timer;
+    private TextMeshPro tmp;
 
     private void Awake()
     {
-        StartButton.onClick.AddListener(OnStart);
+
     }
     void Start()
     {
-        TitleScene.SetActive(true);
-        EndScene.SetActive(false);
+        tmp = TimeUi.GetComponent<TextMeshPro>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        TimeCount();
+    }
 
+    public void TimeCount()
+    {
+        timer += Time.deltaTime;
+        tmp.text = timer.ToString();
     }
 
     public void OnStart()
@@ -38,8 +46,14 @@ public class GameManager : MonoBehaviour
         TimeUi.SetActive(true);
     }
 
-    public void CheckStart()
+    public void BackMenu()
     {
-        Debug.Log("StartButton");
+        var activeScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(activeScene.name);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }

@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 
 public class Goal : MonoBehaviour
 {
     Rigidbody rb;
+
 
     const float G = 10f;
 
@@ -51,5 +53,7 @@ public class Goal : MonoBehaviour
         playerRb.AddForce(gravityForce);
 
     }
+
+ 
 
 }
