@@ -12,7 +12,6 @@ public class Endgame : MonoBehaviour
     GameManager gameMS;
 
     private bool endGame = false;
-    private float scrollSpeed = 50;
 
     private void Awake()
     {
@@ -35,7 +34,7 @@ public class Endgame : MonoBehaviour
         {
             return;
         }
-        rect.anchoredPosition += new Vector2(0,10);
+        rect.anchoredPosition += new Vector2(0,5);
 
     }
 

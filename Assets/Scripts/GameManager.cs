@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
     public bool timeBool = false;
     private float timer;
 
+    private void Awake()
+    {
+        Time.timeScale = 0f;
+    }
+
     void Update()
     {
         if (timeBool)
@@ -41,6 +46,7 @@ public class GameManager : MonoBehaviour
         TimeUi.SetActive(true);
         timeBool = true;
         WASD.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     public void BackMenu()
